@@ -26,7 +26,7 @@ function HomePage({setExerciseToEdit}) {
     }
 
     const loadExercises = async() => {
-        const response = await fetch('/exercises', {method:"get"});
+        const response = await fetch('https://dashboard.heroku.com/apps/exerciselog-node-server-ykunle/deploy/github', {method:"get"});
         const exercises = await response.json();
         setExercises(exercises);
     } 
