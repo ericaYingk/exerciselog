@@ -26,7 +26,7 @@ function HomePage({setExerciseToEdit}) {
     }
 
     const loadExercises = async() => {
-        const response = await fetch('https://exerciselog-node-server-ykunle.herokuapp.com', {method:"get"});
+        const response = await fetch('/exercises', {method:"get"});
         const exercises = await response.json();
         setExercises(exercises);
     } 
