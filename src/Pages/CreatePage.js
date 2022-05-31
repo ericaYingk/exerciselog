@@ -13,7 +13,7 @@ export const CreatePage = () => {
     const addExercise = async() => {
         const newExercise = {name, reps, weight, unit, date};
         /* fetch to add data to exercises collection */
-        const response = await fetch(`/exercises`, {
+        const response = await fetch(`https://exerciselog-node-server-ykunle.herokuapp.com/exercises`, {
             method: 'POST',
             body: JSON.stringify(newExercise),
             headers: {'Content-Type': 'application/json',}
