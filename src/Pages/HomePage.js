@@ -10,7 +10,7 @@ function HomePage({setExerciseToEdit}) {
     const onDelete = async _id => {
         const response = await fetch(`https://exerciselog-node-server-ykunle.herokuapp.com/exercises/${_id}`, {method: 'delete'});
         if (response.status === 204) {
-            const getResponse = await fetch(`/exercises`);
+            const getResponse = await fetch(`https://exerciselog-node-server-ykunle.herokuapp.com/exercises`);
             const exercises = await getResponse.json();
             setExercises(exercises);
         } else {
