@@ -8,7 +8,7 @@ function HomePage({setExerciseToEdit}) {
     const [exercises, setExercises] = useState([]);
     
     const onDelete = async _id => {
-        const response = await fetch(`/exercises/${_id}`, {method: 'delete'});
+        const response = await fetch(`https://exerciselog-node-server-ykunle.herokuapp.com/exercises/${_id}`, {method: 'delete'});
         if (response.status === 204) {
             const getResponse = await fetch(`/exercises`);
             const exercises = await getResponse.json();
