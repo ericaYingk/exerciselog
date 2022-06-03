@@ -14,7 +14,7 @@ export const EditPage=({exerciseToEdit}) => {
     const editExercise = async() => {
         const editedExercise = {name, reps, weight, unit, date};
         /* fetch to edit data for exercise with _id */
-        const response = await fetch(`/exercises/${exerciseToEdit._id}`, {
+        const response = await fetch(`https://exerciselog-node-server-ykunle.herokuapp.com/exercises/${exerciseToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify(editedExercise),
             headers: {'Content-Type': 'application/json',}
